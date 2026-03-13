@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Website</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background-color: #f0f2f5; padding: 20px; }
+        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 600px; margin: auto; }
+        img { width: 100%; border-radius: 10px; margin: 20px 0; }
+        ul { text-align: left; display: inline-block; }
+        input { padding: 10px; border-radius: 5px; border: 1px solid #ccc; width: 60%; }
+        button { padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
 
+    <div class="card">
+        <h1>ยินดีต้อนรับสู่เว็บไซต์ของฉัน</h1>
+        <img src="https://picsum.photos/600/300" alt="Random Image">
+        <p>นี่คือเว็บไซต์หน้าเดียวที่รวม HTML, CSS และ JavaScript เข้าด้วยกันแบบง่ายๆ</p>
+        
+        <h3>รายการข้อมูล:</h3>
+        <ul>
+            <li>หัวข้อที่ 1: การเรียนรู้ HTML</li>
+            <li>หัวข้อที่ 2: การตกแต่งด้วย CSS</li>
+            <li>หัวข้อที่ 3: การเพิ่มลูกเล่นด้วย JavaScript</li>
+        </ul>
+        
+        <p><a href="https://www.google.com" target="_blank">คลิกเพื่อไปที่ Google</a></p>
+
+        <hr>
+        
+        <h3>ทักทายคุณ:</h3>
+        <input type="text" id="nameInput" placeholder="กรอกชื่อของคุณ">
+        <button onclick="greet()">ตกลง</button>
+        <p id="result" style="font-weight: bold; color: #007bff; margin-top: 15px;"></p>
+    </div>
+
+    <script>
+        function greet() {
+            const name = document.getElementById('nameInput').value;
+            const result = document.getElementById('result');
+            if(name) {
+                result.innerText = "สวัสดี " + name + " ยินดีต้อนรับ!";
+            } else {
+                result.innerText = "กรุณากรอกชื่อด้วยนะครับ";
+            }
+        }
+    </script>
+</body>
+</html>
